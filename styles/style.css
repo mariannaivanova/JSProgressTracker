@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-value, .checkbox {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input-value input {
+    width: 40px;
+    height: 25px;
+    border-radius: 30%/50%;
+    box-sizing: border-box;
+    border: 1px solid #212121;
+    text-align: center;
+}
+
+.checkbox {
+    height: 25px;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.checkbox .checkbox-switch {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40px;
+    height: 25px;
+    border-radius: 30%/50%;
+    vertical-align: middle;
+    background: #eee;
+    transition: .2s;
+}
+
+.checkbox .checkbox-switch::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: white;
+    transition: .15s;
+}
+
+.checkbox input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-switch {
+    background: #005DFF;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-switch::before {
+    transform:translateX(15px);
+}
+
+@media screen and (max-width: 568px) {
+    body {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .progress, .input-group {
+        display: inline-flex;
+    }
+
+    .input-group {
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        flex-direction: column;
+    }
+
+    .input-group {
+        gap: 0.5rem;
+        margin: 10px auto;
+    }
+
+    .progress {
+        justify-content: center;
+    }
+
+    .progress-circle {
+        margin: 40px auto;
+    }
+
+}

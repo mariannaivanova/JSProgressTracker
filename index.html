@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="progress">
+    <h3> Progress </h3>
+    <svg class="progress-circle" width="300" height="200">
+        <circle r="80" cx="150" cy="100" fill="#eee"></circle>
+        <circle r="70" cx="150" cy="100" fill="white"></circle>
+    </svg>
+</div>
+<div class="input-group">
+    <form>
+        <label class="input-value">
+            <input type="text" min="0" max="100" step="1" value="50">
+            Value
+        </label>
+    </form>
+    <label class="checkbox">
+        <input type="checkbox">
+        <span class="checkbox-switch"></span>
+        Animate
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" checked>
+        <span class="checkbox-switch"></span>
+        Hide
+    </label>
+</div>
+</body>
+</html>
