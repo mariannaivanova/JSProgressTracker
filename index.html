@@ -9,30 +9,28 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<div class="progress">
-    <h3> Progress </h3>
-    <svg class="progress-circle" width="300" height="200">
-        <circle r="80" cx="150" cy="100" fill="#eee"></circle>
-        <circle r="70" cx="150" cy="100" fill="white"></circle>
-    </svg>
-</div>
-<div class="input-group">
-    <form>
-        <label class="input-value">
-            <input type="text" min="0" max="100" step="1" value="50">
-            Value
+<h3> Progress </h3>
+<div class="content">
+    <progress id="value" max="100" style="--p:50"></progress>
+    <div class="input-group">
+        <form>
+            <label class="input-value">
+                <input id="input" type="text" min="0" max="100" step="1" value="50">
+                Value
+            </label>
+        </form>
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox-switch"></span>
+            Animate
         </label>
-    </form>
-    <label class="checkbox">
-        <input type="checkbox">
-        <span class="checkbox-switch"></span>
-        Animate
-    </label>
-    <label class="checkbox">
-        <input type="checkbox" checked>
-        <span class="checkbox-switch"></span>
-        Hide
-    </label>
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox-switch"></span>
+            Hide
+        </label>
+    </div>
 </div>
+<script src="scripts/index.js"></script>
 </body>
 </html>
