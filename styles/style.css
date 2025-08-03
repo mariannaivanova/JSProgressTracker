@@ -17,6 +17,7 @@ progress {
     border-radius: 50%;
     background: conic-gradient(#005DFF, #005DFF var(--a), #eee var(--a), #eee);
     position: relative;
+    transition: .3s ease;
 }
 
 progress::before {
@@ -31,6 +32,10 @@ progress::before {
 
 progress::-webkit-progress-bar {
     visibility: hidden;
+}
+
+#value {
+    transition: opacity 0.3s ease;
 }
 
 .input-group {
@@ -112,10 +117,6 @@ progress::-webkit-progress-bar {
         align-items: center;
         gap: 4rem;
         margin-top: 50px;
-    }
-
-    .progress, .input-group {
-        display: inline-flex;
     }
 }
 
