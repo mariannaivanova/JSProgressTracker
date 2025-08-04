@@ -8,34 +8,14 @@ body {
     gap: 2rem;
 }
 
-progress {
-    --s: 150px;
-    --w: 10px;
-    --a: calc(((var(--p) * 360) / 100) * 1deg);
-    width: var(--s);
-    height: var(--s);
-    border-radius: 50%;
-    background: conic-gradient(#005DFF, #005DFF var(--a), #eee var(--a), #eee);
+.progress-ring-container {
     position: relative;
-    transition: .3s ease;
-}
-
-progress::before {
-    content: '';
-    position: absolute;
-    width: calc(var(--s) - 2 * var(--w));
-    height: calc(var(--s) - 2 * var(--w));
-    background: #fff;
-    left: var(--w); top: var(--w);
-    border-radius: 50%;
-}
-
-progress::-webkit-progress-bar {
-    visibility: hidden;
+    margin: 0 auto;
+    transition: opacity 0.5s ease;
 }
 
 #value {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 
 .input-group {
